@@ -36,10 +36,10 @@ pipeline {
                     try {
                         sh "docker stop deb9-nginx"
                         sh "docker rm deb9-nginx"
-                        sh "docker run --network=bridge --name=deb9-nginx -ti -d --privileged=true -p 8000:80 lkamz/deb9-nginx"
                     } catch (err) {
-                        echo 'error : $err'
+                        echo '$err'
                     }
+                    sh "docker run --network=bridge --name=deb9-nginx -ti -d --privileged=true -p 8000:80 lkamz/deb9-nginx"
                 }
             }
         }
