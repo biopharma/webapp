@@ -38,7 +38,7 @@ pipeline {
                         sh "docker rm deb9-nginx"
                         sh "docker run --network=bridge --name=deb9-nginx -ti -d --privileged=true -p 8000:80 lkamz/deb9-nginx"
                     } catch (err) {
-                        echo 'error : $err
+                        echo 'error : $err'
                     }
                 }
             }
