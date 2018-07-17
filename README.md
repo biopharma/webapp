@@ -34,3 +34,9 @@ On peut alors vérifier sur GitHub, dans les settings de notre projet => Webhook
   - ./ngrok http 8080
 
 Ajuster ensuite l'url du hook dans github.
+
+# Docker
+
+Le Dockerfile est utilisé pour créer notre image à chaque exécution. Pour pouvoir push notre image sur le docker hub, il faut disposer d'un compte opérationnel. 
+On créer ensuite des credentials dans jenkins avec comme id docker_hub_login (sera réutilisé par la suite), et son user_dokcker_hub / password_docker_hub
+
