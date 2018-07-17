@@ -43,6 +43,20 @@ pipeline {
                 }
             }
         }
+        stage('Test url') {
+            when {
+                branch 'master'
+            }
+            steps {
+                script {
+                    try {
+                        sh "curl localhost:8000"
+                    } catch (err) {
+                        echo '$err'
+                    }
+                }
+            }
+        }
         stage('Deploy to production') {
             when {
                 branch 'master'
