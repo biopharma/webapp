@@ -43,20 +43,6 @@ pipeline {
                 }
             }
         }
-        stage('Test docker container') {
-            when {
-                branch 'master'
-            }
-            steps {
-                script {
-                    try {
-                        sh "curl localhost:8001"
-                    } catch (err) {
-                        echo '$err'
-                    }
-                }
-            }
-        }
         stage('Deploy to production') {
             when {
                 branch 'master'
