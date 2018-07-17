@@ -41,3 +41,12 @@ Le Dockerfile est utilisé pour créer notre image à chaque exécution. Pour po
 
 On créer ensuite des credentials dans jenkins avec comme id docker_hub_login (sera réutilisé par la suite), et son user_dokcker_hub / password_docker_hub
 
+# Déploiement
+
+Pour le démploiement en production, n'importe quel serveur accessible en ssh peut fonctionner, avec nginx d'installé. Nous avons créé un user deploy pour se connecter en ssh, avec les droits sur les repetoires où se trouvent les sources du site.
+
+Ajout du serveur dans jenkins :
+Jenkins => configure => Publish over SSH => add => name = production => hostname ou ip => username = deploy => remote directory = /
+
+Puis :
+jenkins => credentials => Store scoped to jenkins => global => add => deploy/password id = webserver_login
