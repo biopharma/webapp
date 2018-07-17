@@ -50,3 +50,5 @@ Jenkins => configure => Publish over SSH => add => name = production => hostname
 
 Puis :
 jenkins => credentials => Store scoped to jenkins => global => add => deploy/password id = webserver_login
+
+Le Jenkinsfile contient les étapes du pipeline jenkins.
