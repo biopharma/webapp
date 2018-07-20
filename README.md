@@ -1,6 +1,6 @@
 # Biopharma-intranet
 
-Code source se la demo biopharma-intranet-2018.
+Code source de la demo biopharma-intranet-2018.
 
 # Prérequis
 
